@@ -1,0 +1,12 @@
+<div id='signup'>
+  <h1>Create an Account</h1>
+  <form name="signupForm" ng-submit='signup()'>
+    <input type='text' ng-model='user.firstname'>
+    <input type='text' ng-model='user.lastname'>
+    <input type='email' ng-model='user.email'>
+    <!-- <input type='text' ng-model='user.username'> -->
+    <input type="password" ng-model='user.password'>
+    <button>Create</button>
+  </form>
+  <a href="#/login">Already have an account? <strong>Login</strong> ...</a>
+</div>
