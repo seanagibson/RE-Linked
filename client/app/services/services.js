@@ -7,12 +7,8 @@ angular.module('reLinked.services', [])
       url: '/login',
       data: user
     })
-    .then(function(resp){
-      // if(resp.status === 200){
-      //   $location.path('/profile');
-      // } else {
-      //   $location.path('/login');
-      // }
+    .then(function(res){
+      return res.data;
     });
   };
 
@@ -22,8 +18,8 @@ angular.module('reLinked.services', [])
       url: '/signup',
       data: user
     })
-    .then(function(resp){
-      // $location.path('/profile');
+    .then(function(res){
+
     });
   };
 
@@ -32,3 +28,31 @@ angular.module('reLinked.services', [])
     signup: signup
   };
 });
+
+.factory('ProfileFactory', function($http){
+  var getProfile = function(user){
+    return $http({
+      method: 'GET',
+      url: '/profile/?id=' + id,
+    })
+    .then(function(res){
+      return res.data;
+    });
+  };
+
+  var editProfile = function(userData){
+    return $http({
+      method: 'POST',
+      url: '/profile/?id=' + userData.id,
+      data: userData
+    })
+    .then(function(res){
+
+    });
+  };
+
+  return {
+    getProfile: getProfile,
+    editProfile: editProfile
+  };
+})

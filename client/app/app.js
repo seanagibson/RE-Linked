@@ -1,6 +1,7 @@
 angular.module('reLinked', [
   'reLinked.services',
   'reLinked.auth',
+  'reLinked.profile',
   'ngRoute'
 ])
 
