@@ -1,11 +1,21 @@
 <div id='signup'>
   <h1>Create an Account</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input type='text' ng-model='user.firstname'>
-    <input type='text' ng-model='user.lastname'>
-    <input type='email' ng-model='user.email'>
+    <label for='firstname'>First Name</label>
+    <input type='text' id='firstname' ng-model='user.firstname'>
+    <label for='lastname'>Last Name</label>
+    <input type='text' id='lastname' ng-model='user.lastname'>
+    <label for='city'>City</label>
+    <input type='text' id='city' ng-model='user.location.city'>
+    <label for='state'>State</label>
+    <input type='text' id='state' ng-model='user.location.state'>
+    <label for='picture'>Picture Url</label>
+    <input type='text' id='picture' ng-model='user.picture.thumbnail'>
+    <label for='userEmail'>Email</label>
+    <input type='email' id='userEmail' ng-model='user.email'>
     <!-- <input type='text' ng-model='user.username'> -->
-    <input type="password" ng-model='user.password'>
+    <label for='password'>Password</label>
+    <input type="password" id='password' ng-model='user.password'>
     <button>Create</button>
   </form>
   <a href="#/login">Already have an account? <strong>Login</strong> ...</a>

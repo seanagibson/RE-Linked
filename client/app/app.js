@@ -1,21 +1,25 @@
-angular.module('reLinked', [])
+angular.module('reLinked', [
+  'reLinked.services',
+  'reLinked.auth',
+  'ngRoute'
+])
 
 .config(function($routeProvider){
   $routeProvider
     .when('/login', {
-      templateUrl: 'app/auth/login.html',
+      templateUrl: '/app/auth/login.html',
       controller: 'AuthController'
     })
     .when('/signup', {
-      templateUrl: 'app/auth/signup.html',
+      templateUrl: '/app/auth/signup.html',
       controller: 'AuthController'
     })
     .when('/profile',{
-      templateUrl: 'app/profile/profile.html',
+      templateUrl: '/app/profile/profile.html',
       controller: 'ProfileController'
     })
     .when('/search', {
-      templateUrl: 'app/search/search.html',
+      templateUrl: '/app/search/search.html',
       controller: 'SearchController'
     })
     .otherwise({
