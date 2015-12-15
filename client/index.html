@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html ng-app=''>
+<html ng-app='reLinked'>
   <head>
     <meta charset="utf-8" />
     <title>CRE - Linked</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
   </head>
   <body>
-    <h1>Commercial Real Estate Linked</h1>
+    <nav class='navigation'>
+      <h1>Commercial Real Estate Linked</h1>
+      <ul>
+        <li>
+          <a href='#/signup'>Sign Up</a>
+        </li>
+        <li>
+          <a href="#/login">Login</a>
+        </li>
+      </ul>
+    </nav>
+
 
     <div ng-view></div>
 
-    <!-- <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script> -->
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
 
-    <!-- <script src="app/links/links.js"></script>
-    <script src="app/shorten/shorten.js"></script>
-    <script src="app/services/services.js"></script> -->
-    <script src="app/app.js"></script>
+    <script src="/app/auth/auth.js"></script>
+    <script src="/app/profile/profile.js"></script>
+    <script src="/app/services/services.js"></script>
+    <script src="/app/app.js"></script>
   </body>
 </html>
