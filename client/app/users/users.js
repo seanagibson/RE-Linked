@@ -1,9 +1,9 @@
 angular.module('reLinked.users', [])
 
 .controller('UsersController', function($scope, UserFactory){
-  $scope.users = {};
+  $scope.users = [];
 
-  var getUsers = function(){
+  $scope.fetchUsers = function(){
     UserFactory.getUsers()
       .then(function(data){
         $scope.users = data;
@@ -12,4 +12,6 @@ angular.module('reLinked.users', [])
         console.error(err);
       });
   };
+
+  $scope.fetchUsers();
 });
