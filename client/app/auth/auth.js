@@ -1,11 +1,12 @@
 angular.module('reLinked.auth', [])
 
-.controller('AuthController', function($scope, $location ,Auth){
+.controller('AuthController', function($scope, $location , Auth, Profile){
   $scope.user = {};
 
   $scope.signup = function(){
     Auth.signup($scope.user)
-      .then(function(){
+      .then(function(data){
+        Profile.profileData = data;
         $location.path('/profile');
       })
       .catch(function(err){
@@ -15,7 +16,8 @@ angular.module('reLinked.auth', [])
 
   $scope.login = function(){
     Auth.login($scope.user)
-      .then(function(){
+      .then(function(data){
+        Profile.profileData = data;
         $location.path('/profile');
       })
       .catch(function(err){

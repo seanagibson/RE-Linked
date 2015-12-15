@@ -1,0 +1,11 @@
+<div class='users container'>
+  <h2>Search: <input ng-model='query' type='text'/></h2>
+  <div ng-repeat='user in users | filter:query'>
+    <span>
+      <img ng-src={{user.picture.medium}} alt='Profile picture'/>
+      <h2>{{user.name.first}} {{user.name.last}}</h2>
+      <h4>{{user.title}}</h4>
+      <h5>{{user.location.city}} , {{user.location.state}}</h5>
+    </span>
+  </div>
+</div>

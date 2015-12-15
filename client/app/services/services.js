@@ -27,7 +27,7 @@ angular.module('reLinked.services', [])
     login: login,
     signup: signup
   };
-});
+})
 
 .factory('ProfileFactory', function($http){
   var getProfile = function(user){
@@ -54,5 +54,27 @@ angular.module('reLinked.services', [])
   return {
     getProfile: getProfile,
     editProfile: editProfile
+  };
+})
+
+.factory('Profile', function(){
+  var profileData = {};
+
+  return {profileData: profileData};
+})
+
+.factory('UserFactory', function($http){
+  var getUsers = function(){
+    return $http({
+      method: 'GET',
+      url: '/users',
+    })
+    .then(function(res){
+      return res.data;
+    });
+  };
+
+  return{
+    getUsers: getUsers
   };
 })

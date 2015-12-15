@@ -11,6 +11,9 @@ module.exports = [
           state: "delaware",
           zip: 84720
         },
+        title: 'Broker',
+        connections: 100,
+        experience: 'I have 20 years experience selling commercial real estate in the Bay Area.',
         email: "ronald.bennett@example.com",
         username: "beautifulgorilla804",
         password: "cattle",
