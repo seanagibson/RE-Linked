@@ -7526,3 +7526,19 @@ div {
 h2.search {
   text-align: center;
 }
+.userrow {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profileRow {
+  margin-right: 50px;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.profile {
+  text-align: center;
+}
