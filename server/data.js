@@ -8,7 +8,7 @@ module.exports = [
         location: {
           street: "4589 fincher rd",
           city: "allentown",
-          state: "delaware",
+          state: "california",
           zip: 84720
         },
         title: 'Broker',
@@ -24,7 +24,17 @@ module.exports = [
           large: "https://randomuser.me/api/portraits/men/95.jpg",
           medium: "https://randomuser.me/api/portraits/med/men/95.jpg",
           thumbnail: "https://randomuser.me/api/portraits/thumb/men/95.jpg"
-        }
+        },
+        sale: [
+          {picture: 'http://www.paulscharffphotography.com/Golden_Gate_Bridge_Thumbnail.JPG',
+           price: '1,000,000,000',
+           name: 'Golden Gate Bridge',
+           location: {
+             city: 'San Francisco',
+             state: 'California'
+           }
+         }
+        ]
     },
     {
       id: 1,
@@ -38,6 +48,9 @@ module.exports = [
           state: "georgia",
           zip: 11591
         },
+        title: 'Broker',
+        connections: 300,
+        experience: 'I have 20 years experience selling commercial real estate in Georgia.',
         email: "audrey.bailey@example.com",
         username: "bluebutterfly409",
         password: "rubble",
@@ -62,6 +75,9 @@ module.exports = [
           state: "tennessee",
           zip: 57461
         },
+        title: 'Broker',
+        connections: 200,
+        experience: '',
         email: "myrtle.morgan@example.com",
         username: "smallsnake698",
         password: "cardinal",
@@ -86,6 +102,9 @@ module.exports = [
           state: "louisiana",
           zip: 42712
         },
+        title: 'Broker',
+        connections: 20,
+        experience: '',
         email: "denise.diaz@example.com",
         username: "ticklishleopard517",
         password: "firefox",
@@ -110,6 +129,9 @@ module.exports = [
           state: "tennessee",
           zip: 99868
         },
+        title: 'Leasing Broker',
+        connections: 1000,
+        experience: 'I have 20 years experience leasing commercial real estate in Tennessee.',
         email: "aubree.caldwell@example.com",
         username: "heavysnake724",
         password: "keeper",
@@ -134,6 +156,9 @@ module.exports = [
           state: "indiana",
           zip: 99614
         },
+        title: 'Broker',
+        connections: 100,
+        experience: 'I have 10 years experience selling commercial real estate in Boston.',
         email: "jar.mcdonalid@example.com",
         username: "crazyladybug423",
         password: "peter1",
@@ -158,6 +183,9 @@ module.exports = [
           state: "kansas",
           zip: 53783
         },
+        title: 'Broker',
+        connections: 150,
+        experience: '',
         email: "tracy.perkins@example.com",
         username: "silverelephant147",
         password: "1228",
@@ -182,6 +210,9 @@ module.exports = [
           state: "south dakota",
           zip: 40286
         },
+        title: 'Broker',
+        connections: 1,
+        experience: '',
         email: "brett.garza@example.com",
         username: "bigostrich511",
         password: "mustang1",
@@ -206,6 +237,9 @@ module.exports = [
           state: "montana",
           zip: 55797
         },
+        title: 'Leasing Broker',
+        connections: 500,
+        experience: '',
         email: "edith.howard@example.com",
         username: "organicpeacock559",
         password: "1963",
@@ -230,6 +264,9 @@ module.exports = [
           state: "illinois",
           zip: 74338
         },
+        title: 'Broker',
+        connections: 10,
+        experience: '',
         email: "caleb.cox@example.com",
         username: "whiteduck646",
         password: "moses",

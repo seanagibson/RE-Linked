@@ -1,28 +1,30 @@
 <div class='profile'>
   <section class='profile header'>
-    <div>
-      <!-- profile pic -->
-      <img ng-src={{user.picture.medium}} alt='Profile picture'/>
-      <!-- user first & last name -->
-      <h2>{{user.name.first}} {{user.name.last}}</h2>
-      <!-- user title -->
-      <h4>{{user.title}}</h4>
-      <!-- user location -->
-      <h5>{{user.location.city}} , {{user.location.state}}</h5>
-      <!-- user connections -->
-      <h5>Connections: {{user.connections}}</h5>
+    <div class='container'>
+      <p>
+        <img ng-src={{user.picture.medium}} alt='Profile picture'/>
+      </p>
+        <h2>{{user.name.first}} {{user.name.last}}</h2>
+        <h4>{{user.title}}</h4>
+        <h5>{{user.location.city}} , {{user.location.state}}</h5>
+        <h5>Connections: {{user.connections}}</h5>
     </div>
   </section>
   <section class='profile experience'>
       <h2>Experience</h2>
       <button ng-click='toggleEditMode()'><i class='fa fa-pencil'></i></button>
       <button ng-click='saveProfile(user.experience)'><i class='fa fa-floppy-o'></i></button>
-    <div contenteditable={{editMode}} ng-change='saveProfile()' ng-model='user.experience'>{{user.experience}}<div>
+    <div contenteditable={{editMode}} ng-change='saveProfile(user.experience)' ng-model='user.experience'>{{user.experience}}<div>
   </section>
   <section class='profile sale'>
     <h2>Properties For Sale</h2><button ng-click='toggleEditMode()'><i class='fa fa-pencil'></i></button>
     <button><i class='fa fa-floppy-o'></i></button>
-  <div contenteditable={{editMode}}><div>
+  <div ng-repeat='property in user.sale'>
+    <img ng-src='{{property.picture}}'/>
+    <h3>Asking Price: ${{property.price}}</h3>
+    <h4>{{property.name}}</h4>
+    <h5>{{property.location.city}} , {{property.location.state}}<h5>
+  <div>
   </section>
   <section class='profile lease'>
     <h2>Properties For Lease</h2><button ng-click='toggleEditMode()'><i class='fa fa-pencil'></i></button>

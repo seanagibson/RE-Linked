@@ -14,7 +14,7 @@ exports.login = function(req, res){
       userInfo = dbUser;
     }
   });
-  
+
   if(userInfo !== undefined){
     res.status(200);
     res.json(userInfo);
@@ -26,7 +26,15 @@ exports.login = function(req, res){
 };
 
 exports.signup = function(req, res){
-  res.end('ok');
+  var newUser = req.body;
+  _.extend(newUser, {id: db.length,
+                     title: 'Broker',
+                     connections: 100,
+                     experience:''}
+  );
+  db.push(newUser);
+console.log(newUser);
+  res.status(200);
 };
 
 exports.getProfile = function(req, res){

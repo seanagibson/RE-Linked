@@ -1,11 +1,13 @@
 <div class='users container'>
-  <h2>Search: <input ng-model='query' type='text'/></h2>
-  <div ng-repeat='user in users | filter:query'>
-    <span>
-      <img ng-src={{user.picture.medium}} alt='Profile picture'/>
-      <h2>{{user.name.first}} {{user.name.last}}</h2>
+  <h2 class='search'>Search: <input ng-model='query' type='text'/></h2>
+  <div class='row' ng-repeat='user in users | filter:query'>
+    <div class='col-lg-6'>
+      <img ng-src={{user.picture.medium}} alt='Profile picture' ng-click='getUserProfile(user)'/>
+    </div>
+    <div class='col-lg-6'>
+      <h2 ng-click='getUserProfile(user)'>{{user.name.first}} {{user.name.last}}</h2>
       <h4>{{user.title}}</h4>
       <h5>{{user.location.city}} , {{user.location.state}}</h5>
-    </span>
+    </div>
   </div>
 </div>

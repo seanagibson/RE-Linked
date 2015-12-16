@@ -6,7 +6,7 @@ angular.module('reLinked.profile', [])
   $scope.toggleEditMode = function(){
     $scope.editMode = $scope.editMode === false ? true : false;
   };
-  $scope.saveProfile = function(){
-    console.log('User data: ', $scope.user);
+  $scope.saveProfile = function(data){
+    console.log('User data: ', data);
   }
 });

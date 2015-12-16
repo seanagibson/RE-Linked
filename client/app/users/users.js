@@ -1,6 +1,6 @@
 angular.module('reLinked.users', [])
 
-.controller('UsersController', function($scope, UserFactory){
+.controller('UsersController', function($scope, $location, UserFactory, Profile){
   $scope.users = [];
 
   $scope.fetchUsers = function(){
@@ -12,6 +12,11 @@ angular.module('reLinked.users', [])
         console.error(err);
       });
   };
+
+  $scope.getUserProfile = function(user){
+    Profile.profileData = user;
+    $location.path('/profile');
+  }
 
   $scope.fetchUsers();
 });
