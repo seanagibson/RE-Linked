@@ -29,7 +29,7 @@ angular.module('reLinked', [
       controller: 'UsersController'
     })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/users'
     });
 });
 
